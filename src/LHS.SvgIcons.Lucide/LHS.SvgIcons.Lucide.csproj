@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latestmajor</LangVersion>
+        <Nullable>enable</Nullable>
+
+        <Title>Lucide Icons for use with LHS Svg Icons</Title>
+        <Authors>Ellis Smith</Authors>
+        <Company>Limehouse Studios Limited</Company>
+        <Description>Lucide Icons for use with LHS Svg Icons</Description>
+        <Copyright>Limehouse Studios Limited</Copyright>
+        <PackageProjectUrl>https://github.com/limehouse-studios/SvgIcons.Lucide</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/limehouse-studios/SvgIcons.Lucide</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIcon>limehouse_logo.png</PackageIcon>
+        <PackageTags>blazor;icon;icons;pack;svg;mvc</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <Version>1.0.471</Version>
+        <ProductVersion>$(Version)</ProductVersion>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="node_modules/lucide-static/icons/*.svg" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\LHS.SvgIcons.Lucide.Generators\LHS.SvgIcons.Lucide.Generators.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" SetTargetFramework="TargetFramework=netstandard2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LHS.SvgIcons.Core" Version="1.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\Assets\limehouse_logo.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+</Project>
